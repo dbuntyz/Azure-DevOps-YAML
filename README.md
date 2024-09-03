@@ -1,4 +1,4 @@
-# Azure Pipeline for Laravel 11
+# Azure DevOps Pipeline for Laravel 11
 
 
 # Documentation: Setting Up an Azure App Service for Laravel 11
@@ -33,3 +33,15 @@ Follow these steps to set up an Azure App Service for deploying a Laravel 11 app
 14.  Click **Next (Tags)**.
     -   Provide tags in key-value pairs (recommended for better resource management).
 15.  Click **Review + Create** and wait for the App Service to be created.
+
+
+## Step 2: Configure Environment Variables
+
+1.  Go to the **App Service** in the Azure Portal.
+2.  Navigate to **Configuration** > **Application Settings** > **Environment Variables**.
+3.  Click **Add** and add the following environment variable:
+    -   **Name**: `PORT`
+    -   **Value**: `8000`
+4.  In the **App Service** > **Configuration** > **General Settings**, add the following startup command: 
+	- `php artisan serve --host 0.0.0.0`
+
