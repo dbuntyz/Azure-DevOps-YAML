@@ -69,8 +69,8 @@ steps:
   - task: AzureRmWebAppDeployment@4
     inputs:
       ConnectionType: 'AzureRM'
-      azureSubscription: 'TechOkay (ab1b1ec7-da7b-480d-97e9-5d6daf8271d5)'
+      azureSubscription: 'SubName (abcdefg-abcd-abcd-abcd-abcdef)' #Replace with your Subscription Details
       appType: 'webAppLinux'
-      WebAppName: 'techokaylaravel'
+      WebAppName: 'yourwebappname' #Replace with your Web App Name
       packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     displayName: 'Deploy to Azure Web App'
